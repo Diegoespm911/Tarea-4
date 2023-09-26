@@ -217,7 +217,7 @@
             <button class="btn btn-info" id="matematico" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
               Contacto
             </button>
-            <div style="width: 10px;"></div> <!-- Divisor -->
+            <div style="width: 10px;"></div> 
             <button class="btn btn-success" id="contacto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
               Matemático
             </button>
@@ -234,13 +234,11 @@
             </div>
       
           <div class="container mt-5">
-              <!-- Sección de Formulario de Contacto -->
               <section x-data="{ mensajeEnviado: false }">
                   <h2>Formulario</h2>
                   <div class="card">
                       <div class="card-body">
                           <form id="contactForm" @submit.prevent="mensajeEnviado = true">
-                              <!-- Campos del formulario (nombre, correo, asunto, mensaje) aquí... -->
                               <div class="mb-3">
                                   <label for="nombre" class="form-label">Nombre</label>
                                   <input type="text" class="form-control" id="nombre" name="nombre" required>
@@ -345,7 +343,7 @@
                   producto3: 0,
                   total: null,
                   calcularTotal() {
-                      // Sumar los precios de los productos ingresados
+                      // Suma
                       this.total = parseFloat(this.producto1) + parseFloat(this.producto2) + parseFloat(this.producto3);
                   },
               };
@@ -358,7 +356,7 @@
                 edad: 0,
                 cervezasCalculadas: null,
                 calcularCervezas() {
-                    // Realizar el cálculo (Edad x 2) y asignarlo a la variable cervezasCalculadas
+                    // cálculo (Edad x 2)
                     this.cervezasCalculadas = this.edad * 2;
                 },
             };
@@ -366,23 +364,7 @@
       </script>
 
       <script>
-        function calculadoraCompras() {
-            return {
-                producto1: 0,
-                producto2: 0,
-                producto3: 0,
-                total: null,
-                calcularTotal() {
-                    // Sumar los precios de los productos ingresados
-                    this.total = parseFloat(this.producto1) + parseFloat(this.producto2) + parseFloat(this.producto3);
-                },
-            };
-        }
-      </script>
-
-      <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Detectar si la página se cargó debido a un clic en "Home"
             if (window.location.hash === '#') {
                 // Hacer scroll hacia arriba
                 window.scrollTo(0, 0);
